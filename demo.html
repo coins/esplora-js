@@ -1,0 +1,20 @@
+<!--
+  Simple API Demo
+-->
+
+<script type="module">
+    import {Esplora} from './esplora-api.js';
+    // import {Esplora} from 'https://bitcoin-app.robinlinus.com/bitcoin/esplora-api/esplora-api.js';
+    window.client = Esplora
+    client.useTestnet();
+	client.fetchAddressInfo('2NAZGp2t955uwYsBCoUawbf2cWafgnVhQjm').then(console.log);
+    client.useMainnet();
+	client.fetchBalance('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
+	client.fetchTransactions('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
+	client.fetchTransactions('3QYFDVHdb8voaTyzPxWeAuP5bgqA92vk4w').then(console.log);
+	client.fetchUnspentOutputs('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
+	client.fetchBlockAtHeight(200002).then(hash => client.fetchBlock(hash)).then(console.log)
+	client.fetchLatestBlockHash().then(console.log)
+	client.fetchLatestBlockHeight().then(console.log)
+	client.fetchMempool().then(console.log)
+</script>
