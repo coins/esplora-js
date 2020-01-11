@@ -1,5 +1,5 @@
 # esplora.js
-A flexible backend for Bitcoin Clients. JavaScript library for Blockstream's Esplora API. 
+A flexible backend for browser-based Bitcoin clients. JavaScript library for Blockstream's Esplora API. 
 
 ## Demo
 [You can find the demo here](https://coins.github.io/esplora.js/demo.html)
