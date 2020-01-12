@@ -9,10 +9,11 @@ A flexible backend for browser-based Bitcoin clients. JavaScript library for Blo
   - Mainnet & Testnet
   - Error Handling
   - JSDocs
-  - No Dependencies
-  - Compatible with tree shaking
+  - Good Auditability
+    - No dependencies
+    - Compatible with tree shaking ( reduce your code size to the minimum )
   - Error Handling API
-  - most endpoints implemented
+  - most Esplora endpoints implemented
   - Promised-based / compatible with `async/await`
 
 ## Example Code
