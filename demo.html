@@ -8,8 +8,11 @@ Open Console to see output
 <script type="module">
 	import {Esplora} from './esplora.js';
     
+	// Testnet
 	Esplora.useTestnet();
 	Esplora.fetchAddressInfo('2NAZGp2t955uwYsBCoUawbf2cWafgnVhQjm').then(console.log);
+
+	// Mainnet	
 	Esplora.useMainnet();
 	Esplora.fetchBalance('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
 	Esplora.fetchTransactions('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
@@ -26,8 +29,11 @@ Open Console to see output
 <code>
 	import {Esplora} from './esplora.js';
     
+	// Testnet
 	Esplora.useTestnet();
 	Esplora.fetchAddressInfo('2NAZGp2t955uwYsBCoUawbf2cWafgnVhQjm').then(console.log);
+
+	// Mainnet	
 	Esplora.useMainnet();
 	Esplora.fetchBalance('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
 	Esplora.fetchTransactions('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
