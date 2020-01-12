@@ -9,7 +9,7 @@ A flexible backend for browser-based Bitcoin clients. The in-official JavaScript
   - Mainnet & Testnet supported
   - Documented with JSDocs
   - High-level API for error handling
-  - Promised-based / compatible with `async/await`
+  - Promise-based / compatible with `async/await`
   - Most Esplora endpoints implemented
   - Good auditability
     - Simple code
