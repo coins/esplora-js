@@ -347,7 +347,7 @@ class EsploraError extends Error {
             code = message.code;
             message = message.message;
         } catch (e) {
-            // can not parse JSON 
+            // can not parse JSON. Thus, we treat the response as plain text. 
         }
 
         // Initialization
