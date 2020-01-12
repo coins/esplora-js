@@ -296,7 +296,7 @@ export async function fetchLatestBlockHeight() {
 export async function fetchMempool() {
     const response = await fetch(`${ BASE_URI }/mempool`);
     await assertOK(response);
-    return response.text();
+    return response.json();
 }
 
 
