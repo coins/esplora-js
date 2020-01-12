@@ -29,7 +29,7 @@ Esplora.fetchBalance('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
 Esplora.fetchTransactions('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
 Esplora.fetchTransactions('3QYFDVHdb8voaTyzPxWeAuP5bgqA92vk4w').then(console.log);
 Esplora.fetchUnspentOutputs('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
-Esplora.fetchBlockAtHeight(200002).then(hash => client.fetchBlock(hash)).then(console.log)
+Esplora.fetchBlockAtHeight(200002).then(hash => Esplora.fetchBlock(hash)).then(console.log)
 Esplora.fetchLatestBlockHash().then(console.log)
 Esplora.fetchLatestBlockHeight().then(console.log)
 Esplora.fetchMempool().then(console.log)
