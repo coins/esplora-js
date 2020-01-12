@@ -6,38 +6,36 @@ Open Console to see output
 -->
 
 <script type="module">
-    import {Esplora} from './esplora.js';
-    // import {Esplora} from 'https://bitcoin-app.robinlinus.com/bitcoin/esplora-api/esplora-api.js';
-    window.client = Esplora
-    client.useTestnet();
-	client.fetchAddressInfo('2NAZGp2t955uwYsBCoUawbf2cWafgnVhQjm').then(console.log);
-    client.useMainnet();
-	client.fetchBalance('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
-	client.fetchTransactions('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
-	client.fetchTransactions('3QYFDVHdb8voaTyzPxWeAuP5bgqA92vk4w').then(console.log);
-	client.fetchUnspentOutputs('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
-	client.fetchBlockAtHeight(200002).then(hash => client.fetchBlock(hash)).then(console.log)
-	client.fetchLatestBlockHash().then(console.log)
-	client.fetchLatestBlockHeight().then(console.log)
-	client.fetchMempool().then(console.log)
+	import {Esplora} from './esplora.js';
+    
+	Esplora.useTestnet();
+	Esplora.fetchAddressInfo('2NAZGp2t955uwYsBCoUawbf2cWafgnVhQjm').then(console.log);
+	Esplora.useMainnet();
+	Esplora.fetchBalance('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
+	Esplora.fetchTransactions('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
+	Esplora.fetchTransactions('3QYFDVHdb8voaTyzPxWeAuP5bgqA92vk4w').then(console.log);
+	Esplora.fetchUnspentOutputs('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
+	Esplora.fetchBlockAtHeight(200002).then(hash => client.fetchBlock(hash)).then(console.log)
+	Esplora.fetchLatestBlockHash().then(console.log)
+	Esplora.fetchLatestBlockHeight().then(console.log)
+	Esplora.fetchMempool().then(console.log)
 </script>
 
 
 <pre>
 <code>
-    import {Esplora} from './esplora-api.js';
-    // import {Esplora} from 'https://bitcoin-app.robinlinus.com/bitcoin/esplora-api/esplora-api.js';
-    window.client = Esplora
-    client.useTestnet();
-	client.fetchAddressInfo('2NAZGp2t955uwYsBCoUawbf2cWafgnVhQjm').then(console.log);
-    client.useMainnet();
-	client.fetchBalance('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
-	client.fetchTransactions('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
-	client.fetchTransactions('3QYFDVHdb8voaTyzPxWeAuP5bgqA92vk4w').then(console.log);
-	client.fetchUnspentOutputs('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
-	client.fetchBlockAtHeight(200002).then(hash => client.fetchBlock(hash)).then(console.log)
-	client.fetchLatestBlockHash().then(console.log)
-	client.fetchLatestBlockHeight().then(console.log)
-	client.fetchMempool().then(console.log)
+	import {Esplora} from './esplora.js';
+    
+	Esplora.useTestnet();
+	Esplora.fetchAddressInfo('2NAZGp2t955uwYsBCoUawbf2cWafgnVhQjm').then(console.log);
+	Esplora.useMainnet();
+	Esplora.fetchBalance('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
+	Esplora.fetchTransactions('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
+	Esplora.fetchTransactions('3QYFDVHdb8voaTyzPxWeAuP5bgqA92vk4w').then(console.log);
+	Esplora.fetchUnspentOutputs('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log);
+	Esplora.fetchBlockAtHeight(200002).then(hash => client.fetchBlock(hash)).then(console.log)
+	Esplora.fetchLatestBlockHash().then(console.log)
+	Esplora.fetchLatestBlockHeight().then(console.log)
+	Esplora.fetchMempool().then(console.log)
 </code>
 </pre>
