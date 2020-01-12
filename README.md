@@ -7,13 +7,14 @@ A flexible backend for browser-based Bitcoin clients. The in-official JavaScript
 
 ## Features: 
   - Mainnet & Testnet supported
-  - JSDocs
-  - Good auditability
-    - No dependencies
-    - Compatible with tree shaking ( reduce your code size to the minimum )
+  - Documented with JSDocs
   - High-level API for error handling
   - Promised-based / compatible with `async/await`
   - Most Esplora endpoints implemented
+  - Good auditability
+    - Simple code
+    - No dependencies
+    - Compatible with tree shaking ( reduce your code size to the minimum )
 
 ## Example Code
 
