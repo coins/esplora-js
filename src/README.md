@@ -19,7 +19,7 @@ A flexible backend for browser-based Bitcoin clients. The in-official JavaScript
 ## Example Code
 
 ```
-import { Esplora } from 'https://coins.github.io/esplora.js/esplora.js';
+import { Esplora } from 'https://coins.github.io/esplora-js/dist/0.1/esplora.js';
 
 Esplora.useTestnet();
 Esplora.fetchAddressInfo('2NAZGp2t955uwYsBCoUawbf2cWafgnVhQjm').then(console.log);
