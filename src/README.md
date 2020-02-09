@@ -2,7 +2,7 @@
 A flexible backend for browser-based Bitcoin clients. The in-official JavaScript library for Blockstream's Esplora API. 
 
 ## Demo
-[You can find the demo here](demo.html)
+[You can find the demo here](https://coins.github.io/esplora.js/src/demo.html)
 
 
 ## Features: 
@@ -18,8 +18,8 @@ A flexible backend for browser-based Bitcoin clients. The in-official JavaScript
 
 ## Example Code
 
-```
-import { Esplora } from 'https://coins.github.io/esplora-js/dist/0.1/esplora.js';
+```javascript
+const Esplora  = await import('https://coins.github.io/esplora-js/esplora.js');
 
 Esplora.useTestnet();
 Esplora.fetchAddressInfo('2NAZGp2t955uwYsBCoUawbf2cWafgnVhQjm').then(console.log);

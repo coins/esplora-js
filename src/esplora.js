@@ -381,3 +381,4 @@ export const Esplora = {
     fetchMempool,
     fetchLatestBlockHash
 }
+
