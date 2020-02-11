@@ -357,28 +357,3 @@ class EsploraError extends Error {
     }
 }
 
-
-/**
- * Esplora Client
- * 
- *
- */
-export const Esplora = {
-    useTestnet,
-    useMainnet,
-    fetchAddressInfo,
-    fetchBalance,
-    broadcastTransaction,
-    fetchUnspentOutputs,
-    fetchTransactions,
-    fetchTransaction,
-    fetchInclusionProof,
-    fetchTransationInBlock,
-    fetchFeeEstimate,
-    fetchBlock,
-    fetchBlockAtHeight,
-    fetchLatestBlockHeight,
-    fetchMempool,
-    fetchLatestBlockHash
-}
-
