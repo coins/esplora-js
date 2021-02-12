@@ -32,11 +32,13 @@ Esplora.fetchLatestBlockHeight().then(console.log)
 Esplora.fetchMempool().then(console.log)
 ```
 ### Testnet
-```javascript
-const Esplora = await import('https://coins.github.io/esplora-js/esplora.js')
+```html
+<script type="module">
+import * as Esplora from 'https://coins.github.io/esplora-js/esplora.js'
 
 Esplora.useTestnet()
 Esplora.fetchAddressInfo('2NAZGp2t955uwYsBCoUawbf2cWafgnVhQjm').then(console.log)
+</script>
 ```
 
 ## Official API Documentation 
