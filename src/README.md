@@ -19,9 +19,9 @@ A flexible backend for browser-based Bitcoin clients. The unofficial JavaScript 
 ## Example Code
 
 ### Mainnet 
-```javascript
-import { Esplora } from 'https://coins.github.io/esplora-js/esplora.js'
-// const Esplora = await import('https://coins.github.io/esplora-js/esplora.js'); // use this when pasting into console
+```html
+<script type="module">
+import * as Esplora from 'https://coins.github.io/esplora-js/esplora.js'
 
 Esplora.fetchBalance('1K9zQ8f4iTyhKyHWmiDKt21cYX2QSDckWB').then(console.log)
 Esplora.fetchTransactions('3QYFDVHdb8voaTyzPxWeAuP5bgqA92vk4w').then(console.log)
@@ -30,7 +30,9 @@ Esplora.fetchBlockAtHeight(200002).then(hash => Esplora.fetchBlock(hash)).then(c
 Esplora.fetchLatestBlockHash().then(console.log)
 Esplora.fetchLatestBlockHeight().then(console.log)
 Esplora.fetchMempool().then(console.log)
+</script>
 ```
+
 ### Testnet
 ```html
 <script type="module">
