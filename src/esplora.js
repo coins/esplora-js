@@ -132,15 +132,16 @@ export async function fetchTransactions(address) {
 /**
  * Returns information about the transaction.
  *
- * @param {string} txid 
+ * @param {string} txid - The id of the tx to fetch.
+ * @param {format} [format] - The return format. One of ('' | 'hex' | 'raw').
  * @return {object} transaction
  *
  * @example
  *
- *     fetchTransaction('2b19a7287581da86de256536fb6ba1be1347bd6dd62a899e965b44374fdebfec')
+ *     fetchTransaction('2b19a7287581da86de256536fb6ba1be1347bd6dd62a899e965b44374fdebfec', 'hex')
  */
-export async function fetchTransaction(txid) {
-    const response = await fetch(`${ BASE_URI }/tx/${ txid }`);
+export async function fetchTransaction(txid, format = '') {
+    const response = await fetch(`${ BASE_URI }/tx/${ txid }/${ format }`);
     await assertOK(response);
     return response.json();
 }
