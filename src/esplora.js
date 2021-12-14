@@ -134,7 +134,7 @@ export async function fetchTransactions(address) {
  *
  * @param {string} txid - The id of the tx to fetch.
  * @param {format} [format] - The return format. One of ('' | 'hex' | 'raw').
- * @return {object} transaction
+ * @return {object} The transaction
  *
  * @example
  *
@@ -145,6 +145,25 @@ export async function fetchTransaction(txid, format = '') {
     await assertOK(response);
     return response.json();
 }
+
+
+/**
+ * Returns information about the transaction's outspends.
+ *
+ * @param {string} txid - The id of the tx to fetch.
+ * @return {object} The transaction outspends
+ *
+ * @example
+ *
+ *     fetchTransactionOutspends('2b19a7287581da86de256536fb6ba1be1347bd6dd62a899e965b44374fdebfec')
+ */
+export async function fetchTransactionOutspends(txid) {
+    const response = await fetch(`${ BASE_URI }/tx/${ txid }/outspends`);
+    await assertOK(response);
+    return response.json();
+}
+
+
 
 /**
  * Returns a merkle inclusion proof for the transaction.
