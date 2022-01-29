@@ -141,7 +141,7 @@ export async function fetchTransaction(txid, format = '') {
     const response = await fetch(`${ BASE_URI }/tx/${ txid }/${ format }`);
     await assertOK(response);
     if (format === 'hex')
-        return response.body();
+        return response.text();
     return response.json();
 }
 
