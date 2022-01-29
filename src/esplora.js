@@ -138,7 +138,8 @@ export async function fetchTransactions(address) {
  *     fetchTransaction('2b19a7287581da86de256536fb6ba1be1347bd6dd62a899e965b44374fdebfec', 'hex')
  */
 export async function fetchTransaction(txid, format = '') {
-    const response = await fetch(`${ BASE_URI }/tx/${ txid }/${ format }`);
+    if(format) format = '/' + format;
+    const response = await fetch(`${ BASE_URI }/tx/${ txid }${ format }`);
     await assertOK(response);
     if (format === 'hex')
         return response.text();
@@ -249,6 +250,25 @@ export async function fetchBlock(hash) {
     await assertOK(response);
     return response.json();
 }
+
+
+/**
+ * Returns the hex-encoded block header.
+ * 
+ * 
+ * @param {string} hash - The block hash 
+ * @return {string} hex-encoded block header
+ * 
+ * @example
+ *
+ *     fetchBlock('00000000000000000024fb37364cbf81fd49cc2d51c09c75c35433c3a1945d04')
+ */
+export async function fetchBlockHeader(hash) {
+    const response = await fetch(`${ BASE_URI }/block/${ hash }/header`);
+    await assertOK(response);
+    return response.text();
+}
+
 
 /**
  * Returns the hash of the block currently at height.
