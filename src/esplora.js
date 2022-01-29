@@ -6,10 +6,8 @@
 
 /*
     Simple Esplora Client
-
     See Blockstream API Documentation
         https://github.com/Blockstream/esplora/blob/master/API.md
-
     Features: 
         - Mainnet & Testnet
         - Error Handling
@@ -142,6 +140,8 @@ export async function fetchTransactions(address) {
 export async function fetchTransaction(txid, format = '') {
     const response = await fetch(`${ BASE_URI }/tx/${ txid }/${ format }`);
     await assertOK(response);
+    if (format === 'hex')
+        return response.body();
     return response.json();
 }
 
@@ -375,4 +375,3 @@ class EsploraError extends Error {
         this.code = code;
     }
 }
-
