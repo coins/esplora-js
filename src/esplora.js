@@ -143,6 +143,8 @@ export async function fetchTransaction(txid, format = '') {
     await assertOK(response);
     if (format === 'hex')
         return response.text();
+    if(format === 'raw')
+        return response.arrayBuffer();
     return response.json();
 }
 
