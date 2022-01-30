@@ -168,6 +168,24 @@ export async function fetchTransactionOutspends(txid) {
 
 
 /**
+ * Returns the transaction confirmation status.
+ *
+ * @param {string} txid - The id of the tx to fetch the status for.
+ * @return {object} the transaction confirmation status.
+ *
+ * @example
+ *
+ *     fetchTransactionStatus('2b19a7287581da86de256536fb6ba1be1347bd6dd62a899e965b44374fdebfec')
+ */
+export async function fetchTransactionStatus(txid) {
+    const response = await fetch(`${ BASE_URI }/tx/${ txid }/status`);
+    await assertOK(response);
+    return response.json();
+}
+
+
+
+/**
  * Returns a merkle inclusion proof for the transaction.
  * Currently matches the merkle proof format used by Electrum's blockchain.transaction.get_merkle. 
  * Will eventually be changed to use bitcoind's merkleblock format instead.
@@ -333,7 +351,6 @@ export async function fetchLatestBlockHeight() {
  *
  *     fetchLatestBlockHash()
  */
-
 export async function fetchMempool() {
     const response = await fetch(`${ BASE_URI }/mempool`);
     await assertOK(response);
