@@ -43,6 +43,11 @@ Esplora.fetchAddressInfo('2NAZGp2t955uwYsBCoUawbf2cWafgnVhQjm').then(console.log
 </script>
 ```
 
+#### Demo in your Dev Tools via a Data URL 
+```
+data:text/html;base64,PHRpdGxlPkVzcGxvcmEgQVBJIEphdmFTY3JpcHQgUGxheWdyb3VuZDwvdGl0bGU+CjxzY3JpcHQgdHlwZT0ibW9kdWxlIj5pbXBvcnQgKiBhcyBFc3Bsb3JhIGZyb20gJ2h0dHBzOi8vY29pbnMuZ2l0aHViLmlvL2VzcGxvcmEtanMvZXNwbG9yYS5qcyc7d2luZG93LkVzcGxvcmEgPSBFc3Bsb3JhO2NvbnNvbGUubG9nKCdUeXBlICJFc3Bsb3JhLiInKTwvc2NyaXB0PjxoMz5PcGVuIENvbnNvbGU8L2gzPg==
+```
+
 ## Official API Documentation 
 Here you can find Blockstream's official [Esplora API Documentation](https://github.com/Blockstream/esplora/blob/master/API.md). 
 
