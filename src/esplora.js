@@ -29,7 +29,7 @@ const BASE_URI_TESTNET = `https://blockstream.info/testnet/api`;
 const BASE_URI_SIGNET = `https://mutinynet.com/api`;
 
 // Base URI
-let BASE_URI = BASE_URI_SIGNET; // BASE_URI_MAINNET;
+let BASE_URI = BASE_URI_MAINNET;
 
 export function useTestnet() {
     BASE_URI = BASE_URI_TESTNET;
